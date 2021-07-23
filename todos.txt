@@ -1,0 +1,30 @@
+create redux store
+  create action creators
+  create reducers
+  add Provider
+make components
+  SongsList
+  SongDetail
+connect components
+
+creating redux store
+  create action creators
+    there is only one action dispatched when a song is selected
+    create SELECT_SONG action which have a payload of the song
+  create the reducers
+    make a reducer to just return list of songs
+    make a reducer that deals with SELECT_SONG action and modify the song in state to selected song
+    combine reducer & export default them
+  add Provider
+    create a store from combined reducers and pass it to Provider
+
+SongsList
+  connect to redux store to receive a list of songs to be viewed
+  define mapStateToProps function and return an opbject with the songs from the state of redux store
+  in the list, put a button that dispatches an action with the song corresponding to it
+  before using the action creator function to dispatch an action, pass it to connect function
+
+SongDetail
+  connect the component with redux store
+  define mapStateToProps function and return an object with selected song
+  view the details of selected song
